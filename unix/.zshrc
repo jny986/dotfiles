@@ -26,15 +26,9 @@ export ZSH="$HOME/.oh-my-zsh"
 
 plugins=(
     artisan
-    npm
     composer
-    docker
-    docker-compose
-    git
-    git-auto-fetch
     z
     1password
-    vscode
     direnv
     starship
     fzf
@@ -42,3 +36,8 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="/home/jny986/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/jny986/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
