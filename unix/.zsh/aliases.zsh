@@ -4,11 +4,10 @@
 
 # Laravel
 alias sail='[ -f sail ] && sail || vendor/bin/sail'
-alias a="artisan"
-alias tinker="artisan tinker"
-alias seed="artisan db:seed"
-alias serve="artisan serve"
-alias mfs="artisan migrate:fresh --seed"
+alias art="php artisan"
+alias tinker="php artisan tinker"
+alias seed="php artisan db:seed"
+alias mfs="php artisan migrate:fresh --seed"
 alias sqlit="sed -e 's/\(DB_.*\)/# \\1/g' -e 's/# \(DB_CONNECTION=\).*/\\1sqlite/g' -i .env"
 alias lenv="cp -n .env.example .env && (grep '^APP_KEY=.\+' .env > /dev/null || artisan key:generate)"
 alias laravel-setup="composer install && lenv && sqlit && artisan migrate --force --seed"
@@ -26,3 +25,8 @@ alias dc="docker compose"
 alias dd="docker compose down"
 alias dup="docker compose up -d"
 alias dre="docker compose down && docker compose up -d"
+
+# Python
+alias python="python3.14"
+alias py="python3.14"
+alias pip="pip3.14"
