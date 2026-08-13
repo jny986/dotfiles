@@ -11,6 +11,7 @@ alias mfs="php artisan migrate:fresh --seed"
 alias sqlit="sed -e 's/\(DB_.*\)/# \\1/g' -e 's/# \(DB_CONNECTION=\).*/\\1sqlite/g' -i .env"
 alias lenv="cp -n .env.example .env && (grep '^APP_KEY=.\+' .env > /dev/null || artisan key:generate)"
 alias laravel-setup="composer install && lenv && sqlit && artisan migrate --force --seed"
+alias debug="herd debug vendor/bin/pest"
 
 # Git
 alias g="git"
@@ -30,3 +31,5 @@ alias dre="docker compose down && docker compose up -d"
 alias python="python3.14"
 alias py="python3.14"
 alias pip="pip3.14"
+
+alias bp="boilerplates"
